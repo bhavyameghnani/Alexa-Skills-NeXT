@@ -1,0 +1,129 @@
+{
+    "dialogue-long-technology": {
+      "durations": "long",
+      "type": "dialogue",
+      "SSET": "dialogue-long-technology",
+      "genre": "technology",
+      "name": "The future we're building -- and boring by Elon Musk"
+    },
+    "dialogue-long-business": {
+      "durations": "long",
+      "type": "dialogue",
+      "SSET": "dialogue-long-business",
+      "genre": "business",
+      "name": "Think Fast, Talk Smart: Communication Techniques"
+    },
+    "dialogue-long-health": {
+          "durations": "long",
+          "type": "dialogue",
+          "SSET": "dialogue-long-health",
+          "genre": "health",
+          "name": "Chasing Health With Sanjay Gupta, MD "
+        },
+    "dialogue-short-technology": {
+          "durations": "short",
+          "type": "dialogue",
+          "SSET": "dialogue-short-technology",
+          "genre": "technology",
+          "name": "Where Technology Will Be in 20 Years with Jamie Metzl"
+        },
+    "dialogue-short-business": {
+          "durations": "short",
+          "type": "dialogue",
+          "SSET": "dialogue-short-business",
+          "genre": "business",
+          "name": "The Mindset of Self-Made Millionaires"
+        },
+    "dialogue-short-health": {
+          "durations": "short",
+          "type": "dialogue",
+          "SSET": "dialogue-short-health",
+          "genre": "health",
+          "name": "How to make healthy eating unbelievably easy by Luke Durward"
+        },
+    "dialogue-average-technology": {
+          "durations": "average",
+          "type": "dialogue",
+          "SSET": "dialogue-average-technology",
+          "genre": "technology",
+          "name": "Technology: Distraction or Opportunity?"
+        },
+     "dialogue-average-health": {
+          "durations": "average",
+          "type": "dialogue",
+          "SSET": "dialogue-average-health",
+          "genre": "health",
+          "name": "What really matters at the end of life by BJ Miller"
+        },
+     "dialogue-average-business": {
+          "durations": "average",
+          "type": "dialogue",
+          "SSET": "dialogue-average-business",
+          "genre": "business",
+          "name": "Build a Business That Can Scale | Tony Robbins name"
+        },
+    "monologue-long-technology": {
+      "durations": "long",
+      "type": "monologue",
+      "SSET": "monologue-long-technology",
+      "genre": "technology",
+      "name": "Waymo and the Future of Self-Driving Cars | Lex Fridman name"
+    },
+    "monologue-long-business": {
+      "durations": "long",
+      "type": "monologue",
+      "SSET": "monologue-long-business",
+      "genre": "business",
+      "name": "50 Minutes of Marketing Strategy You Can Start to Use Today"
+    },
+    "monologue-long-health": {
+          "durations": "long",
+          "type": "monologue",
+          "SSET": "monologue-long-health",
+          "genre": "health",
+          "name": "The best diet for mental and brain health according to a nutritional psychiatrist"
+        },
+    "monologue-short-technology": {
+          "durations": "short",
+          "type": "monologue",
+          "SSET": "monologue-short-technology",
+          "genre": "technology",
+          "name": "Re-inventing Education for the Digital Age | David Middelbeck"
+        },
+    "monologue-short-business": {
+          "durations": "short",
+          "type": "monologue",
+          "SSET": "monologue-short-business",
+          "genre": "business",
+          "name": "How to Start a Business or name From Scratch | Tim Ferriss"
+        },
+    "monologue-short-health": {
+          "durations": "short",
+          "type": "monologue",
+          "SSET": "monologue-short-health",
+          "genre": "health",
+          "name": "Running and Mental Health | Dr. Shyam Bhat | State of Mind"
+        },
+    "monologue-average-technology": {
+          "durations": "average",
+          "type": "monologue",
+          "SSET": "monologue-average-technology",
+          "genre": "technology",
+          "name": "Technology in Education"
+        },
+     "monologue-average-health": {
+          "durations": "average",
+          "type": "monologue",
+          "SSET": "monologue-average-health",
+          "genre": "health",
+          "name": "3 Mental Self-Care Habits of the Happiest People"
+        },
+     "monologue-average-business": {
+          "durations": "average",
+          "type": "monologue",
+          "SSET": "monologue-average-business",
+          "genre": "business",
+          "name": "Mastering Sales | Tony Robbins name"
+        }
+  }
+  

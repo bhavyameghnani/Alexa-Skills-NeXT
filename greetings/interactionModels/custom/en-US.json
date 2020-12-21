@@ -1,0 +1,115 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "honda next",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "good",
+                "synonyms": [
+                  "better",
+                  "best",
+                  "great",
+                  "happy",
+                  "grateful",
+                  "well"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "bad",
+                "synonyms": [
+                  "not well",
+                  "sad",
+                  "worst",
+                  "not great",
+                  "angry"
+                ]
+              }
+            }
+          ],
+          "name": "feeling"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "yes",
+                "synonyms": [
+                  "ok",
+                  "fine",
+                  "please"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "no",
+                "synonyms": [
+                  "never",
+                  "not at all",
+                  "not now"
+                ]
+              }
+            }
+          ],
+          "name": "confirm"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "dummy value: literal API return entity"
+              }
+            }
+          ],
+          "name": "stringLiteral"
+        }
+      ],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    }
+  },
+  "version": "3"
+}

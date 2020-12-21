@@ -1,0 +1,168 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "pod catch",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "short",
+                "synonyms": [
+                  "small",
+                  "tiny",
+                  "brief",
+                  "concise"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "medium",
+                "synonyms": [
+                  "regular",
+                  "average",
+                  "standard",
+                  "usual"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "long",
+                "synonyms": [
+                  "lengthy",
+                  "extended",
+                  "lasting"
+                ]
+              }
+            }
+          ],
+          "name": "durations"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "dialogue",
+                "synonyms": [
+                  "interview",
+                  "conversation",
+                  "discussion"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "monologue",
+                "synonyms": [
+                  "speech",
+                  "oration",
+                  "storytelling"
+                ]
+              }
+            }
+          ],
+          "name": "type"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "technology",
+                "synonyms": [
+                  "automation",
+                  "technical",
+                  "computers",
+                  "science"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "health",
+                "synonyms": [
+                  "wellbeing",
+                  "fitness",
+                  "mental",
+                  "nutrition"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "business",
+                "synonyms": [
+                  "marketing",
+                  "career",
+                  "profession",
+                  "startup"
+                ]
+              }
+            }
+          ],
+          "name": "genre"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "dummy value: literal API return entity"
+              }
+            }
+          ],
+          "name": "stringLiteral"
+        }
+      ],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    }
+  },
+  "version": "5"
+}

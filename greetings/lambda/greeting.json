@@ -1,0 +1,27 @@
+{
+    "good-yes": {
+        "feeling": "good",
+        "confirm": "yes",
+        "SSET": "good-yes",
+        "quote": "You are off to a great place, today is your day. Your mountains are waiting, so get on your way!"
+    },
+    "good-no": {
+        "feeling": "good",
+        "confirm": "no",
+        "SSET": "good-no",
+        "quote": "Okay, have a great day!"
+    },
+    "bad-yes": {
+          "feeling": "bad",
+          "confirm": "yes",
+          "SSET": "bad-yes",
+          "quote": "Work for a cause, Not for applause. Live life to express, Not to impress."
+    },
+    "bad-no": {
+          "feeling": "bad",
+          "confirm": "no",
+          "SSET": "bad-no",
+          "quote": "Okay, I hope rest of your day goes awesome!"
+    }
+  }
+  
