@@ -145,16 +145,6 @@
             }
           ],
           "name": "genre"
-        },
-        {
-          "values": [
-            {
-              "name": {
-                "value": "dummy value: literal API return entity"
-              }
-            }
-          ],
-          "name": "stringLiteral"
         }
       ],
       "modelConfiguration": {
@@ -164,5 +154,5 @@
       }
     }
   },
-  "version": "5"
+  "version": "8"
 }

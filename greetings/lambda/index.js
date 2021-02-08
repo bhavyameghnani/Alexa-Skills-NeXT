@@ -13,6 +13,41 @@
 
 const Alexa = require('ask-sdk-core');
 const data = require('./greeting.json');
+const timeData = require('./time.json');
+
+
+ const GetTimeAPIHandler = {
+    canHandle(handlerInput) {
+        console.log('Hello', handlerInput.requestEnvelope.request.apiRequest.name);
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'Dialog.API.Invoked'
+        && handlerInput.requestEnvelope.request.apiRequest.name === 'getTime';
+    },
+    handle(handlerInput) {
+
+        const apiRequest = handlerInput.requestEnvelope.request.apiRequest;
+        
+        let location = resolveEntity(apiRequest.slots, "location");
+        console.log('location', location);
+        
+        const timeResult = {};
+        timeResult.location = 'Sorry, I am unable to fetch the location';
+        if(null !== location){
+            const key = `${location}`;
+            const databaseResponse = timeData[key];
+            
+            timeResult.timeRequired = databaseResponse.timeRequired;
+            timeResult.location = apiRequest.arguments.location;
+            timeResult.buddy = apiRequest.arguments.buddy;
+            console.log('response from GetTimeAPIHandlerHandler ', databaseResponse.timeRequired);
+            
+        }
+
+        const response = buildSuccessApiResponse(timeResult);
+        console.log('GetTimeAPIHandlerHandler', JSON.stringify(response));
+        
+        return response;
+    }
+};
 
 const GetRecommendationAPIHandler = {
     
@@ -21,6 +56,7 @@ const GetRecommendationAPIHandler = {
             && handlerInput.requestEnvelope.request.apiRequest.name === 'getRecommendation';
     },
     handle(handlerInput) {
+        
         const apiRequest = handlerInput.requestEnvelope.request.apiRequest;
         
         let feeling = resolveEntity(apiRequest.slots, "feeling");
@@ -47,6 +83,9 @@ const GetRecommendationAPIHandler = {
     }
 };
 
+
+
+
 // The intent reflector is used for interaction model testing and debugging.
 // It will simply repeat the intent the user said. You can create custom handlers
 // for your intents by defining them above, then also adding them to the request
@@ -61,7 +100,7 @@ const IntentReflectorHandler = {
         
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .reprompt()
             .getResponse();
     }
 };
@@ -118,6 +157,7 @@ const ErrorHandler = {
 // These simple interceptors just log the incoming and outgoing request bodies to assist in debugging.
 const RequestInterceptor = { //Happen before handlers
     process(handlerInput) {
+        console.log('RequestInterceptor ', handlerInput.requestEnvelope.request.apiRequest.name);
         console.log('request -', JSON.stringify(handlerInput));
     }
 };
@@ -125,6 +165,7 @@ const RequestInterceptor = { //Happen before handlers
 // Happens after handlers
 const ResponseInterceptor = { 
     process(handlerInput) {
+        console.log('ResponseInterceptor ', handlerInput.requestEnvelope.request.apiRequest.name);
         console.log('response -', JSON.stringify(handlerInput.responseBuilder.getResponse()));
     }
 };
@@ -139,9 +180,10 @@ const buildSuccessApiResponse = (returnEntity) => {
 
 const skillBuilder = Alexa.SkillBuilders.custom();
 
-exports.handler = skillBuilder
+ exports.handler = skillBuilder
     .addRequestInterceptors(RequestInterceptor)
     .addRequestHandlers(
+        GetTimeAPIHandler,
         GetRecommendationAPIHandler,
         IntentReflectorHandler,
         SessionEndedRequestHandler

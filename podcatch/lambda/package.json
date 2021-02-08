@@ -11,6 +11,8 @@
   "dependencies": {
     "ask-sdk-core": "^2.7.0",
     "ask-sdk-model": "^1.19.0",
-    "aws-sdk": "^2.326.0"
+    "aws-sdk": "^2.326.0",
+    "firebase-admin": "^8.9.2",
+    "inflection": "^1.12.0"
   }
 }

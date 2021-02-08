@@ -14,6 +14,20 @@
 const Alexa = require('ask-sdk-core');
 const data = require('./PodCatch.json');
 
+const admin = require("firebase-admin");
+const serviceAccount = require("firebase.json");
+
+let type;
+let durations;
+let genre;
+let name;
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://hondanext-8ed2e.firebaseio.com"
+});
+
+const DB = admin.firestore();
 
 const GetRecommendationAPIHandler = {
     
@@ -21,12 +35,12 @@ const GetRecommendationAPIHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'Dialog.API.Invoked' 
             && handlerInput.requestEnvelope.request.apiRequest.name === 'getRecommendation';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         const apiRequest = handlerInput.requestEnvelope.request.apiRequest;
         
-        let type = resolveEntity(apiRequest.slots, "type");
-        let durations = resolveEntity(apiRequest.slots, "durations");
-        let genre = resolveEntity(apiRequest.slots, "genre");
+        type = resolveEntity(apiRequest.slots, "type");
+        durations = resolveEntity(apiRequest.slots, "durations");
+        genre = resolveEntity(apiRequest.slots, "genre");
         
         const recommendationResult = {};
         if (type !== null && durations !== null && genre !== null) {
@@ -39,14 +53,37 @@ const GetRecommendationAPIHandler = {
             recommendationResult.durations = apiRequest.arguments.durations;
             recommendationResult.type = apiRequest.arguments.type;
             recommendationResult.genre = apiRequest.arguments.genre;
+            
+            name = databaseResponse.name;
         }
         
         const response = buildSuccessApiResponse(recommendationResult);
         console.log('GetRecommendationAPIHandler', JSON.stringify(response));
         
+        let speakOutput = '';
+        try{
+            await DB.collection('transactions').add({
+                skillname : "PodCatch",
+                podcast : name,
+                timestamp : admin.firestore.Timestamp.now(),
+                type : type,
+                durations : durations,
+                genre : genre
+            })
+            speakOutput = `Adding ${name} to your preferences`; 
+            
+        }catch(e){
+            console.log(e);
+            speakOutput =  `There was some problem while saving this data`;
+        } 
+        
+        console.log('Return DB Data', speakOutput);
+        
         return response;
     }
 };
+
+
 
 // The intent reflector is used for interaction model testing and debugging.
 // It will simply repeat the intent the user said. You can create custom handlers

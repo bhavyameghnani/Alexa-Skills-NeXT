@@ -1,0 +1,22 @@
+{
+    "gateway": {
+        "location": "gateway",
+        "SSET": "gateway",
+        "timeRequired": "Interesting, ETA for Gateway-of-India is 1 hour from your current location. It's going to be fun ! Let's go !"
+    },
+    "juhu": {
+       "location": "juhu",
+        "SSET": "juhu",
+        "timeRequired": "Interesting, ETA for Juhu Beach is 30 minutes from your current location. It's going to be fun ! Let's go !"
+    },
+    "marine": {
+        "location": "marine",
+        "SSET": "marine",
+        "timeRequired": "Interesting, ETA for Marine Drive is 45 minutes from your current location. It's going to be fun ! Let's go !"
+    },
+    "nariman": {
+        "location": "nariman",
+        "SSET": "nariman",
+        "timeRequired": "Interesting, ETA for Nariman Point is 1 hour from your current location. It's going to be fun ! Let's go !"
+    }
+  }

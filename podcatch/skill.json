@@ -99,9 +99,6 @@
       "usesPersonalInfo": false
     },
     "publishingInformation": {
-      "automaticDistribution": {
-        "isActive": false
-      },
       "category": "KNOWLEDGE_AND_TRIVIA",
       "distributionCountries": [],
       "distributionMode": "PUBLIC",

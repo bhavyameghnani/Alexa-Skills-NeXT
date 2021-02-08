@@ -102,6 +102,44 @@
             }
           ],
           "name": "stringLiteral"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "nariman",
+                "synonyms": [
+                  "nariman point"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "juhu",
+                "synonyms": [
+                  "juhu chowpatty",
+                  "juhu beach"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "gateway",
+                "synonyms": [
+                  "gateway of india"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "marines",
+                "synonyms": [
+                  "marine drive"
+                ]
+              }
+            }
+          ],
+          "name": "location"
         }
       ],
       "modelConfiguration": {
@@ -111,5 +149,5 @@
       }
     }
   },
-  "version": "3"
+  "version": "18"
 }
